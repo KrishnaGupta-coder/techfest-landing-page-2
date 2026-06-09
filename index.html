@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Ambassador Program | Techfest 2026 | IIT Bombay</title>
+    <meta name="description" content="Register as a College Ambassador in Techfest IIT Bombay's CA Program - a premier internship opportunity to explore technology, build interpersonal skills, earn certificates from IIT Bombay and grow your network.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background FX Grid & Scanline -->
+    <div class="cyber-grid"></div>
+    <div class="scanline"></div>
+    <div class="glow-bg-radial"></div>
+
+    <!-- HUD Header / Navbar -->
+    <header class="hud-header">
+        <div class="header-container">
+            <a href="#" class="logo-group">
+                <!-- Correct TF SVG Logo Recreated -->
+                <svg class="techfest-svg-logo" viewBox="0 0 100 80" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Left slanted magenta slash -->
+                    <path class="logo-magenta-slash" d="M 22 55 L 32 25 L 38 25 L 28 55 Z" />
+                    <!-- Right slanted cyan T (making a TF ligature) -->
+                    <path class="logo-cyan-t" d="M 33 25 L 68 25 L 65 33 L 52 33 L 45 55 L 38 55 L 45 33 L 33 33 Z" fill="#00f3ff" />
+                </svg>
+                <div class="logo-text">
+                    <span class="logo-brand">Techfest</span>
+                    <span class="logo-sub">IIT BOMBAY</span>
+                </div>
+            </a>
+
+            <nav class="nav-links">
+                <a href="#about" class="nav-item"><span class="nav-num">01.</span> INFO</a>
+                <a href="#diagnostics" class="nav-item"><span class="nav-num">02.</span> DOMAINS</a>
+                <a href="#ca-portal" class="nav-item"><span class="nav-num">03.</span> REWARDS</a>
+                <a href="#partner-benefits" class="nav-item"><span class="nav-num">04.</span> PARTNERS</a>
+                <a href="#contact" class="nav-item"><span class="nav-num">05.</span> CONTACTS</a>
+            </nav>
+
+            <div class="header-controls">
+                <button class="sound-toggle-btn" id="soundToggle" title="Toggle System Audio Feed">
+                    <i data-lucide="volume-2" class="sound-icon-on"></i>
+                    <i data-lucide="volume-x" class="sound-icon-off hidden"></i>
+                    <span class="btn-tooltip">AUDIO ACTIVE</span>
+                </button>
+                <button class="theme-toggle-btn" id="themeToggle" title="Toggle Cyber Mode Theme">
+                    <i data-lucide="paint-bucket"></i>
+                    <span class="btn-tooltip">THEME: DARK</span>
+                </button>
+                <div class="sys-status">
+                    <span class="status-dot"></span>
+                    <span class="status-text">SYS_ONLINE</span>
+                </div>
+                <a href="#ca-registration" class="cta-glitch-btn">
+                    <span class="btn-text">INITIALIZE LINK</span>
+                    <span class="btn-glitch-border"></span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-btn" id="menuToggle">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <a href="#about" class="mobile-nav-item">INFO</a>
+        <a href="#diagnostics" class="mobile-nav-item">DOMAINS</a>
+        <a href="#ca-portal" class="mobile-nav-item">REWARDS</a>
+        <a href="#partner-benefits" class="mobile-nav-item">PARTNERS</a>
+        <a href="#contact" class="mobile-nav-item">CONTACTS</a>
+        <a href="#ca-registration" class="mobile-cta-btn">INITIALIZE LINK</a>
+    </div>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="section-container hero-grid">
+                <div class="hero-info">
+                    <!-- High-tech warning alert -->
+                    <div class="hud-alert-badge">
+                        <i data-lucide="terminal"></i>
+                        <span>SYSTEM LINK SECURED // TECHFEST 2026 // CA PROGRAM</span>
+                    </div>
+
+                    <!-- Main Glitch Heading -->
+                    <h1 class="hero-title" data-text="COLLEGE AMBASSADOR">COLLEGE AMBASSADOR</h1>
+                    <h2 class="hero-subtitle">PROGRAM <span class="accent-text">2026</span></h2>
+                    <p class="hero-description-tagline">Techfest, IIT Bombay // 30th Edition</p>
+                    
+                    <p class="hero-body-text">
+                        Techfest, IIT Bombay’s College Ambassador Program is a premier internship opportunity to explore technology, build interpersonal skills, earn certificates from IIT Bombay, and grow your professional network. Join 21,000+ ambassadors representing over 2,400+ universities across India.
+                    </p>
+
+                    <!-- Countdown HUD Widget -->
+                    <div class="hud-countdown-widget">
+                        <div class="widget-header">
+                            <span class="widget-title"><i data-lucide="cpu"></i> UPTIME_TO_LAUNCH</span>
+                            <span class="widget-serial">NODE: CA-GRID-2026</span>
+                        </div>
+                        <div class="countdown-timer" id="countdown">
+                            <div class="time-block">
+                                <span class="time-num" id="days">193</span>
+                                <span class="time-lbl">DAYS</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-block">
+                                <span class="time-num" id="hours">14</span>
+                                <span class="time-lbl">HRS</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-block">
+                                <span class="time-num" id="minutes">45</span>
+                                <span class="time-lbl">MINS</span>
+                            </div>
+                            <div class="time-separator">:</div>
+                            <div class="time-block">
+                                <span class="time-num" id="seconds">08</span>
+                                <span class="time-lbl">SECS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="hero-actions">
+                        <a href="#ca-registration" class="cyber-btn primary-cyber">
+                            <span class="cyber-btn-inner">
+                                <i data-lucide="shield-alert"></i>
+                                <span>INITIALIZE LINK</span>
+                            </span>
+                        </a>
+                        <a href="#diagnostics" class="cyber-btn secondary-cyber">
+                            <span class="cyber-btn-inner">
+                                <i data-lucide="activity"></i>
+                                <span>SYS DIAGNOSTICS</span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual-wrapper">
+                    <div class="hero-hud-frame">
+                        <div class="hud-scanner-line"></div>
+                        <!-- Cybernetic borders/markers -->
+                        <div class="hud-corner top-left"></div>
+                        <div class="hud-corner top-right"></div>
+                        <div class="hud-corner bottom-left"></div>
+                        <div class="hud-corner bottom-right"></div>
+                        <div class="hud-coords">LAT: 19.1334° N // LON: 72.9147° E</div>
+                        <div class="hud-target-reticle"></div>
+                        <!-- Cyborg Render Image -->
+                        <img src="assets/cyborg_hero.png" alt="Cyborg Neuro-Frame Illustration" class="cyborg-img">
+                        <!-- Dynamic HUD labels -->
+                        <div class="hud-metric-label optic-label">
+                            <span class="metric-line"></span>
+                            <span class="metric-txt">OPTIC_ZOOM_94%</span>
+                        </div>
+                        <div class="hud-metric-label core-label">
+                            <span class="metric-line"></span>
+                            <span class="metric-txt">CORE_HEAT_38.2°C</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar (UPDATED WITH ACTUAL DATA) -->
+        <section class="stats-bar" id="about">
+            <div class="section-container stats-grid">
+                <div class="stat-card">
+                    <div class="stat-num">21K+</div>
+                    <div class="stat-label">College Ambassadors</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">2,497+</div>
+                    <div class="stat-label">Indian Universities</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">499+</div>
+                    <div class="stat-label">Global Campus Partners</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-num">1.8L+</div>
+                    <div class="stat-label">Annual Footfall (3 Days)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Sections (Domains of Work) -->
+        <section class="about-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">AMBASSADOR ROLE DOMAINS</h2>
+                    <p class="section-subtitle">Develop your skills, work in distinct domains, and contribute to building Techfest 2026</p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i data-lucide="palette"></i>
+                        </div>
+                        <h3>01. Creatives</h3>
+                        <p>Express the futuristic aesthetic of Techfest through graphic design, digital design assets, and content creation.</p>
+                        <span class="card-glow-border"></span>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i data-lucide="globe"></i>
+                        </div>
+                        <h3>02. Web</h3>
+                        <p>Coordinate digital infrastructure, manage portals, and streamline online campaigns for regional college clusters.</p>
+                        <span class="card-glow-border"></span>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon-box">
+                            <i data-lucide="megaphone"></i>
+                        </div>
+                        <h3>03. Marketing</h3>
+                        <p>Lead publicity drives, manage social channels, and drive student registrations for events and workshops.</p>
+                        <span class="card-glow-border"></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Diagnostics Section (Cyborg Blueprint mapped to actual CA Domains) -->
+        <section class="diagnostics-section" id="diagnostics">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">CYBORG DIAGNOSTICS: DOMAINS OF WORK</h2>
+                    <p class="section-subtitle">Select different sensory and biological mechanical core nodes to retrieve detailed work descriptions</p>
+                </div>
+
+                <div class="diagnostics-panel-layout">
+                    <!-- Cyborg Interactive Vector Blueprint -->
+                    <div class="blueprint-canvas-wrapper">
+                        <div class="blueprint-title">CHASSIS MODEL: TF-CA26 // INTERN BLUEPRINT</div>
+                        <!-- Custom vector blueprint diagram -->
+                        <div class="cyborg-blueprint-svg">
+                            <!-- Humanoid schematic -->
+                            <svg viewBox="0 0 400 500" class="blueprint-svg">
+                                <defs>
+                                    <!-- Grid pattern -->
+                                    <pattern id="blueprint-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                                        <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(0, 243, 255, 0.04)" stroke-width="1"/>
+                                    </pattern>
+                                </defs>
+                                <rect width="100%" height="100%" fill="url(#blueprint-grid)" />
+                                
+                                <!-- Center vertical axis -->
+                                <line x1="200" y1="20" x2="200" y2="480" stroke="rgba(0, 243, 255, 0.15)" stroke-dasharray="5, 5" />
+                                
+                                <!-- Cyborg Silhouette outline -->
+                                <!-- Head -->
+                                <path d="M 185,50 Q 185,45 200,45 Q 215,45 215,50 L 217,70 Q 200,85 183,70 Z" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-opacity="0.6"/>
+                                <!-- Neck -->
+                                <path d="M 192,78 L 192,92 L 208,92 L 208,78" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-opacity="0.4"/>
+                                <!-- Chest & Core -->
+                                <path d="M 155,95 L 245,95 L 235,210 L 165,210 Z" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-opacity="0.6"/>
+                                <!-- Shoulders -->
+                                <circle cx="150" cy="100" r="10" fill="none" stroke="#00f3ff" stroke-width="1" stroke-opacity="0.5" />
+                                <circle cx="250" cy="100" r="10" fill="none" stroke="#00f3ff" stroke-width="1" stroke-opacity="0.5" />
+                                <!-- Arms -->
+                                <!-- Left Arm -->
+                                <path d="M 140,105 L 125,180 L 115,240 L 122,250 L 132,240 L 140,180 L 148,112" fill="none" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.4"/>
+                                <!-- Right Arm -->
+                                <path d="M 260,105 L 275,180 L 285,240 L 278,250 L 268,240 L 260,180 L 252,112" fill="none" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.4"/>
+                                <!-- Cyber Wings / Propulsion Vectors -->
+                                <path d="M 155,110 L 90,120 L 70,200 L 155,160 M 245,110 L 310,120 L 330,200 L 245,160" fill="none" stroke="#bd00ff" stroke-width="1" stroke-opacity="0.4" stroke-dasharray="3, 3"/>
+                                <!-- Spine/Waist -->
+                                <rect x="190" y="210" width="20" height="40" fill="none" stroke="#00f3ff" stroke-width="1" stroke-opacity="0.5"/>
+                                <!-- Hips -->
+                                <path d="M 160,250 L 240,250 L 225,280 L 175,280 Z" fill="none" stroke="#00f3ff" stroke-width="1.5" stroke-opacity="0.6"/>
+                                <!-- Legs -->
+                                <path d="M 175,280 L 170,380 L 165,460 L 180,465 L 185,385 L 195,280" fill="none" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.4"/>
+                                <path d="M 225,280 L 230,380 L 235,460 L 220,465 L 215,385 L 205,280" fill="none" stroke="#00f3ff" stroke-width="1.2" stroke-opacity="0.4"/>
+
+                                <!-- INTERACTIVE BLUEPRINT NODES (Mapped to Actual CA Domains) -->
+                                <!-- 1. Optical Array (Eye) -> Creatives -->
+                                <g class="blueprint-node active" id="node-creatives" data-sector="creatives">
+                                    <circle cx="206" cy="65" r="7" class="node-pulse-circle"/>
+                                    <circle cx="206" cy="65" r="3" class="node-core-circle"/>
+                                    <line x1="206" y1="65" x2="300" y2="65" class="node-leader-line"/>
+                                    <text x="310" y="69" class="node-lbl-right">OPTICAL_CREATIVES</text>
+                                </g>
+
+                                <!-- 2. Neural Core (Brain) -> Web -->
+                                <g class="blueprint-node" id="node-web" data-sector="web">
+                                    <circle cx="200" cy="58" r="8" class="node-pulse-circle"/>
+                                    <circle cx="200" cy="58" r="4" class="node-core-circle"/>
+                                    <line x1="200" y1="58" x2="100" y2="58" class="node-leader-line"/>
+                                    <text x="90" y="62" class="node-lbl-left">NEURAL_WEB_CODE</text>
+                                </g>
+
+                                <!-- 3. Reactor Cell (Core) -> Marketing -->
+                                <g class="blueprint-node" id="node-marketing" data-sector="marketing">
+                                    <circle cx="200" cy="140" r="10" class="node-pulse-circle"/>
+                                    <circle cx="200" cy="140" r="5" class="node-core-circle"/>
+                                    <line x1="200" y1="140" x2="300" y2="140" class="node-leader-line"/>
+                                    <text x="310" y="144" class="node-lbl-right">REACTOR_MARKETING</text>
+                                </g>
+
+                                <!-- 4. Servo Actuator (Left Arm) -> Events -->
+                                <g class="blueprint-node" id="node-events" data-sector="events">
+                                    <circle cx="120" cy="210" r="8" class="node-pulse-circle"/>
+                                    <circle cx="120" cy="210" r="4" class="node-core-circle"/>
+                                    <line x1="120" y1="210" x2="40" y2="210" class="node-leader-line"/>
+                                    <text x="30" y="214" class="node-lbl-left">SERVO_EVENTS_CORE</text>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Diagnostics Log Screen -->
+                    <div class="terminal-hud-logger">
+                        <div class="terminal-header">
+                            <div class="term-status-group">
+                                <span class="term-dot green"></span>
+                                <span class="term-dot yellow"></span>
+                                <span class="term-dot red"></span>
+                            </div>
+                            <span class="terminal-title" id="terminalSubsys">SYS_LOG_SUB: OPTICAL_CREATIVES</span>
+                            <span class="terminal-uptime">ENCRYPTED LINK: L2</span>
+                        </div>
+                        <div class="terminal-body" id="diagnosticLogText">
+                            <!-- Default loaded content: Creatives -->
+                            <div class="terminal-block">
+                                <p class="term-prompt">C:\DIAGNOSTICS> read sector --creatives</p>
+                                <p class="term-log-highlight">>>> VISUAL DESIGN MATRIX ONLINE</p>
+                                <h3 class="term-title">CREATIVES & DESIGN DOMAIN</h3>
+                                <p class="term-p text-glow">Drive the digital aesthetics of Techfest. Conceptualize visual branding, graphic flyers, social media kits, and UI/UX layouts that capture the futuristic cyberpunk look.</p>
+                                <ul class="term-list">
+                                    <li><span class="cyan-bullet">■</span> <strong>Graphic Assets:</strong> Design high-definition digital posters and promotional kits.</li>
+                                    <li><span class="cyan-bullet">■</span> <strong>Video Production:</strong> Assist in editing promo videos, reels, and stories.</li>
+                                    <li><span class="cyan-bullet">■</span> <strong>Brand Visuals:</strong> Align campus nodes under consistent Techfest styling guides.</li>
+                                </ul>
+                                <div class="terminal-stats-strip">
+                                    <div>SKILLS: <span class="accent-text">PHOTOSHOP / ILLUSTRATOR / CANVA</span></div>
+                                    <div>PRIORITY: <span class="success-text">HIGH</span></div>
+                                </div>
+                                <button class="cyber-btn-sm node-action-btn" onclick="scrollToRegister()">
+                                    <span>UPLOAD PARAMETERS</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- College Ambassador Tiers & Rewards (UPDATED WITH ACTUAL LEADERBOARD BADGES) -->
+        <section class="ca-section" id="ca-portal">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">CA LEADERBOARD TIERS & REWARDS</h2>
+                    <p class="section-subtitle">Earn points by completing tasks, unlock official badges, and win top placement incentives</p>
+                </div>
+
+                <!-- Gamified Tiers Display -->
+                <div class="ca-tiers-grid">
+                    <!-- Bronze Card -->
+                    <div class="tier-card" data-tier="bronze">
+                        <div class="tier-glow-bg"></div>
+                        <div class="tier-icon bronze-icon">
+                            <i data-lucide="shield"></i>
+                        </div>
+                        <span class="tier-badge">LEVEL 01</span>
+                        <h3 class="tier-name">BRONZE BADGE</h3>
+                        <p class="tier-desc">Awarded to any Ambassador who successfully completes at least one official Techfest task.</p>
+                        <div class="tier-perks">
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Rank-Based Internship Certificate</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Official Techfest Referral Link</span>
+                        </div>
+                        <div class="tier-level-indicator">MINIMUM 1 TASK COMPLETED</div>
+                    </div>
+
+                    <!-- Silver Card -->
+                    <div class="tier-card" data-tier="silver">
+                        <div class="tier-glow-bg"></div>
+                        <div class="tier-icon silver-icon">
+                            <i data-lucide="shield-check"></i>
+                        </div>
+                        <span class="tier-badge">LEVEL 02</span>
+                        <h3 class="tier-name">SILVER BADGE</h3>
+                        <p class="tier-desc">Achieved by the top 30% of active ambassadors on the live leaderboards.</p>
+                        <div class="tier-perks">
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Interview Prep Subscription</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Burraa / Ubon Premium Vouchers</span>
+                        </div>
+                        <div class="tier-level-indicator">TOP 30% ON LEADERBOARD</div>
+                    </div>
+
+                    <!-- Gold Card -->
+                    <div class="tier-card" data-tier="gold">
+                        <div class="tier-glow-bg"></div>
+                        <div class="tier-icon gold-icon">
+                            <i data-lucide="award"></i>
+                        </div>
+                        <span class="tier-badge">LEVEL 03</span>
+                        <h3 class="tier-name">GOLD BADGE</h3>
+                        <p class="tier-desc">Achieved by the top 15% of active ambassadors demonstrating outstanding performance.</p>
+                        <div class="tier-perks">
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Letter of Recommendation (IIT Bombay)</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Course Scholarships & Vouchers</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Corporate Internship Pipelines</span>
+                        </div>
+                        <div class="tier-level-indicator">TOP 15% ON LEADERBOARD</div>
+                    </div>
+
+                    <!-- Diamond Card -->
+                    <div class="tier-card" data-tier="diamond">
+                        <div class="tier-glow-bg"></div>
+                        <div class="tier-icon diamond-icon">
+                            <i data-lucide="crown"></i>
+                        </div>
+                        <span class="tier-badge">LEVEL 04</span>
+                        <h3 class="tier-name">DIAMOND BADGE</h3>
+                        <p class="tier-desc">Earned by the elite top 1.25% of ambassadors, commanding maximum campus network links.</p>
+                        <div class="tier-perks">
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Free Accommodation at IIT Bombay</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> Official Techfest Merch / Swag Box</span>
+                            <span class="perk-item"><i data-lucide="check-circle-2"></i> VIP Passes & Special Guest Dinner</span>
+                        </div>
+                        <div class="tier-level-indicator">TOP 1.25% ON LEADERBOARD</div>
+                    </div>
+                </div>
+
+                <!-- Ranks & Leaderboard Rewards Matrix -->
+                <div class="rewards-matrix-container">
+                    <div class="matrix-header">
+                        <h3><i data-lucide="trophy"></i> LEADERBOARD RANK REWARDS MATRIX</h3>
+                        <span class="matrix-tag">UPDATED 2026 CYCLE</span>
+                    </div>
+                    <div class="matrix-table-wrapper">
+                        <table class="matrix-table">
+                            <thead>
+                                <tr>
+                                    <th>LEADERBOARD RANK</th>
+                                    <th>OFFICIAL REWARDS & SWAG KITS</th>
+                                    <th>CORPORATE & PARTNER INCENTIVES</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span class="rank-pill rank-1-3">RANK 1 - 3</span></td>
+                                    <td><strong>Official Techfest Swag Kit</strong><br>T-Shirt, Sticker Sheet, Pens & Bookmarks (Unstop)</td>
+                                    <td><strong>Internship Opportunity</strong><br>Direct channel from Languify</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-4-5">RANK 4 - 5</span></td>
+                                    <td><strong>Alpha OG Wear</strong><br>Exclusive T-Shirt from Alpha OG</td>
+                                    <td><strong>Internship Opportunity</strong><br>Direct channel from Languify</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-6-10">RANK 6 - 10</span></td>
+                                    <td><strong>Free Accommodation at IIT Bombay</strong><br>Full access during Techfest 2026</td>
+                                    <td><strong>Movida Premium Footwear & Unstop Pens</strong><br>Free pair of custom footwear & swag</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-11-20">RANK 11 - 20</span></td>
+                                    <td><strong>Accommodation Access</strong><br>50% accommodation discount at IIT Bombay</td>
+                                    <td><strong>Ezygro Business Credits</strong><br>₹5,000 off on services</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-21-25">RANK 21 - 25</span></td>
+                                    <td><strong>Accommodation Access</strong><br>50% accommodation discount at IIT Bombay</td>
+                                    <td><strong>Ubon Sound Kit</strong><br>Premium audio wearables discount</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-26-30">RANK 26 - 30</span></td>
+                                    <td><strong>Intern Academy Goodies Kit</strong><br>T-Shirt, Cap, Pen & diary log</td>
+                                    <td><strong>Grito Lab & Burraa Deals</strong><br>₹2,000 flat holiday off & Grito Lab kit</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-31-50">RANK 31 - 50</span></td>
+                                    <td><strong>Event Coordinator Access</strong><br>Free access to exclusive events + customized merch</td>
+                                    <td><strong>EGN India PPO Opportunities</strong><br>Direct PPO/PPI & meetups with VCs/investors</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-51-100">RANK 51 - 100</span></td>
+                                    <td><strong>Letter of Recommendation</strong><br>Official certificate from Techfest, IIT Bombay</td>
+                                    <td><strong>M Cyber Academy Pass</strong><br>10% off cyber-defense certifications</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-101-150">RANK 101 - 150</span></td>
+                                    <td><strong>Official Internship Certificate</strong><br>Rank-based certificate from Techfest, IIT Bombay</td>
+                                    <td><strong>GlowLogics Free Training</strong><br>1 Free course of choice</td>
+                                </tr>
+                                <tr>
+                                    <td><span class="rank-pill rank-151-300">RANK 151 - 300</span></td>
+                                    <td><strong>Official Internship Certificate</strong><br>Rank-based certificate from Techfest, IIT Bombay</td>
+                                    <td><strong>Languify Interview Pro</strong><br>Free subscription to interview prep tools</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Partner Benefits (Discount & Vouchers Section) -->
+        <section class="partners-section" id="partner-benefits">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">EXCLUSIVE PARTNER BENEFITS</h2>
+                    <p class="section-subtitle">Sync with corporate and training nodes to download exclusive vouchers and discounts for all CAs</p>
+                </div>
+
+                <div class="partners-grid">
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">UNSTOP</span>
+                            <span class="p-deal">10% OFF</span>
+                        </div>
+                        <p>Discount on Unstop Pro subscription vouchers for interview prep and coding practice.</p>
+                    </div>
+
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">EASEMYTRIP</span>
+                            <span class="p-deal">₹5 LAKH COUPONS</span>
+                        </div>
+                        <p>Travel vouchers distributed among active campus ambassadors during the festival.</p>
+                    </div>
+
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">NEXTIAS</span>
+                            <span class="p-deal">₹10,000 OFF</span>
+                        </div>
+                        <p>UPSC & GATE coaching preparation discount coupons for verified ambassadors.</p>
+                    </div>
+
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">UBON</span>
+                            <span class="p-deal">19% DISCOUNT</span>
+                        </div>
+                        <p>Flat discounts on gadgets, audio systems, and accessories for all active nodes.</p>
+                    </div>
+
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">M CYBER ACADEMY</span>
+                            <span class="p-deal">10% OFF & INTERNSHIPS</span>
+                        </div>
+                        <p>Ambassadors get discount entries to cybersecurity courses and priority internship offers.</p>
+                    </div>
+
+                    <div class="partner-benefit-card">
+                        <div class="partner-head">
+                            <span class="p-brand">BURRAA</span>
+                            <span class="p-deal">₹1,000 DISCOUNT</span>
+                        </div>
+                        <p>Flat discount on group trips and active adventure packages for all registered CAs.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Registration Terminal Portal (The CA_ENROLLMENT_PORTAL_v2026.exe Form) -->
+        <section class="ca-enrollment-section">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">INITIALIZE NODE CONNECTION</h2>
+                    <p class="section-subtitle">Apply below to register as a College Ambassador and initiate your campus terminal link</p>
+                </div>
+
+                <div class="registration-terminal-container" id="ca-registration">
+                    <div class="terminal-frame">
+                        <div class="terminal-bar">
+                            <span class="terminal-sys-tag">CA_ENROLLMENT_PORTAL_v2026.exe</span>
+                            <span class="terminal-connection-indicator">SECURE SSL LINK: ACTIVE</span>
+                        </div>
+                        
+                        <!-- Mini terminal console interface form -->
+                        <form id="caRegisterForm" class="terminal-form" onsubmit="handleRegistration(event)">
+                            <div class="form-instruction-line">
+                                <span class="term-prefix">SYS:</span> Initialize uplink sequence. Enter agent credentials to bind campus node.
+                            </div>
+                            
+                            <!-- Prompt Name -->
+                            <div class="terminal-input-group">
+                                <label for="agentName" class="terminal-label">AGENT_NAME:></label>
+                                <input type="text" id="agentName" required placeholder="[Full Name]" autocomplete="off" class="terminal-input">
+                            </div>
+
+                            <!-- Prompt Email -->
+                            <div class="terminal-input-group">
+                                <label for="agentEmail" class="terminal-label">SECURE_EMAIL:></label>
+                                <input type="email" id="agentEmail" required placeholder="[agent@domain.com]" autocomplete="off" class="terminal-input">
+                            </div>
+
+                            <!-- Prompt College -->
+                            <div class="terminal-input-group">
+                                <label for="agentCollege" class="terminal-label">CAMPUS_ORIGIN:></label>
+                                <input type="text" id="agentCollege" required placeholder="[College / Institute Name]" autocomplete="off" class="terminal-input">
+                            </div>
+
+                            <!-- Prompt Phone -->
+                            <div class="terminal-input-group">
+                                <label for="agentPhone" class="terminal-label">COMMS_LINK:></label>
+                                <input type="tel" id="agentPhone" required placeholder="[Mobile Number]" autocomplete="off" class="terminal-input">
+                            </div>
+
+                            <!-- Optional referral code -->
+                            <div class="terminal-input-group">
+                                <label for="agentReferral" class="terminal-label">REFERRAL_CODE:></label>
+                                <input type="text" id="agentReferral" placeholder="[Optional Referral Code]" autocomplete="off" class="terminal-input">
+                            </div>
+
+                            <div class="terminal-actions">
+                                <button type="submit" class="terminal-submit-btn">
+                                    <span class="btn-bracket">[</span>
+                                    <span class="btn-text-content">INITIALIZE_DATA_UPLINK</span>
+                                    <span class="btn-bracket">]</span>
+                                </button>
+                            </div>
+                        </form>
+
+                        <!-- CLI Logging output for progress / feedback -->
+                        <div id="terminalConsoleLog" class="terminal-log-output hidden">
+                            <!-- Logs generated on submit -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Official Contact Directory -->
+        <section class="contact-section" id="contact">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">COMMUNICATION MANAGERS</h2>
+                    <p class="section-subtitle">Uplink direct queries to the official Techfest IIT Bombay publicity and management grid</p>
+                </div>
+
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <span class="contact-role">MEDIA & PUBLICITY MANAGER</span>
+                        <h3>Prakhar Gupta</h3>
+                        <p class="c-detail"><i data-lucide="phone"></i> +91 98932 80821</p>
+                        <p class="c-detail"><i data-lucide="mail"></i> prakhar@techfest.org</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="contact-role">EVENTS MANAGER</span>
+                        <h3>Siddhi Jain</h3>
+                        <p class="c-detail"><i data-lucide="phone"></i> +91 83490 34485</p>
+                        <p class="c-detail"><i data-lucide="mail"></i> siddhi@techfest.org</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <span class="contact-role">MEDIA & PUBLICITY MANAGER</span>
+                        <h3>Prince Bhati</h3>
+                        <p class="c-detail"><i data-lucide="phone"></i> +91 88298 34894</p>
+                        <p class="c-detail"><i data-lucide="mail"></i> prince@techfest.org</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Grid Matrix -->
+        <section class="social-matrix-section" id="social-matrix">
+            <div class="section-container">
+                <div class="section-header">
+                    <h2 class="section-title">COMMUNICATION MATRIX</h2>
+                    <p class="section-subtitle">Link into the official Techfest IIT Bombay networks to sync real-time broadcasts</p>
+                </div>
+
+                <div class="social-grid">
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/techfest_iitbombay/?hl=en" target="_blank" class="social-card instagram-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="instagram"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>INSTAGRAM</h3>
+                            <p class="social-desc">Digital aesthetic catalog. Realtime graphical assets, competition alerts, and live event stories.</p>
+                            <div class="social-handle">@techfest_iitbombay</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+
+                    <!-- X (Twitter) -->
+                    <a href="https://x.com/Techfest_IITB?lang=en" target="_blank" class="social-card x-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="twitter"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>X MATRIX</h3>
+                            <p class="social-desc">Micro-transmission protocols. Real-time announcements, urgent scheduling updates, and prompt tech alerts.</p>
+                            <div class="social-handle">@Techfest_IITB</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+
+                    <!-- LinkedIn -->
+                    <a href="https://www.linkedin.com/company/techfest/?originalSubdomain=in" target="_blank" class="social-card linkedin-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="linkedin"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>LINKEDIN</h3>
+                            <p class="social-desc">Professional node matrix. Corporate partnerships, research publications, and alumni relations pipelines.</p>
+                            <div class="social-handle">Techfest, IIT Bombay</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/iitbombaytechfest/" target="_blank" class="social-card facebook-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="facebook"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>FACEBOOK PROTOCOL</h3>
+                            <p class="social-desc">Historical archive and community network. Large-scale discussions and heritage galleries of past seasons.</p>
+                            <div class="social-handle">/iitbombaytechfest</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+
+                    <!-- WhatsApp -->
+                    <a href="https://www.whatsapp.com/channel/0029VaqxA9IAjPXM1339Pv41" target="_blank" class="social-card whatsapp-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="message-square"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>WHATSAPP FEED</h3>
+                            <p class="social-desc">Direct communications link. Official announcements, schedules, links and announcements sent to your device.</p>
+                            <div class="social-handle">Techfest Broadcast Channel</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://www.youtube.com/user/techfestiitbombay" target="_blank" class="social-card youtube-accent">
+                        <div class="social-card-inner">
+                            <div class="social-icon-header">
+                                <i data-lucide="youtube"></i>
+                                <span class="social-tag">SYNCED</span>
+                            </div>
+                            <h3>YOUTUBE STREAM</h3>
+                            <p class="social-desc">High-bandwidth video matrix. Dynamic aftermovies, recorded guest lectures, and live arena broadcasts.</p>
+                            <div class="social-handle">/techfestiitbombay</div>
+                        </div>
+                        <span class="social-glow-border"></span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Interactive Footer Grid -->
+    <footer class="hud-footer">
+        <div class="footer-container">
+            <!-- Custom requested Copyright pill style from screenshot 2 -->
+            <div class="footer-copyright-pill">
+                <span class="pill-c-icon">©</span> Techfest, IIT Bombay
+            </div>
+            
+            <div class="footer-sys-info">
+                <span>SYS_VER: 30.0.1_NEXUS</span>
+                <span class="footer-divider">|</span>
+                <span>STATUS: SECURE MATRIX</span>
+                <span class="footer-divider">|</span>
+                <span>OFFICIAL PORTAL</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- App JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>
